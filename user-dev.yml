@@ -3,6 +3,13 @@ server:
 spring:
   application:
       name: microserver-user
+  zipkin:
+    base-url: http://127.0.0.1:9401
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1    
   datasource:
     url: jdbc:mysql://106.55.1.61:3360/spc_db?characterEncoding=UTF8
     driver-class-name: com.mysql.jdbc.Driver
