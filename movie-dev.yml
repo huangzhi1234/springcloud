@@ -3,13 +3,13 @@ server:
 spring:
   application:
       name: microserver-movie
-  zipkin:
-    base-url: http://127.0.0.1:9401
-    sender:
-      type: web
-  sleuth:
-    sampler:
-      probability: 1 
+  #zipkin:
+  #  base-url: http://127.0.0.1:9401
+  #  sender:
+  #    type: web
+  #sleuth:
+  #  sampler:
+  #    probability: 1 
       
   datasource:
     url: jdbc:mysql://39.107.69.255:3306/dbmApi_db?characterEncoding=UTF8
@@ -45,6 +45,6 @@ eureka:
     registry-fetch-interval-seconds: 5 #刷新注册信息的间隔时间
 
 
-feign:
-  hystrix:
-    enabled: true
+#feign:
+#  hystrix:
+#    enabled: true
