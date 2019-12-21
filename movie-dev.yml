@@ -9,7 +9,29 @@ spring:
       type: web
   sleuth:
     sampler:
-      probability: 1    
+      probability: 1 
+      
+  datasource:
+    url: jdbc:mysql://39.107.69.255:3306/dbmApi_db?characterEncoding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: Yuyu123qwe#$
+    type: com.alibaba.druid.pool.DruidDataSource
+    initial-size: 1
+    max-active: 10
+    min-idle: 1
+    max-wait: 27000
+    validation-query: select 1
+    time-between-connect-error-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    test-on-borrow: true
+    test-while-idle: true
+    pool-prepared-statements: true
+    max-pool-prepared-statement-per-connection-size: 20
+    jpa:
+      database: mysql
+      show-sql: true
+      generate-ddl: true #是否生成表结构    
 
 eureka:
   instance:
