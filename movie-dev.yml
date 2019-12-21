@@ -2,15 +2,7 @@ server:
   port: 8080
 spring:
   application:
-      name: microserver-movie
-  #zipkin:
-  #  base-url: http://127.0.0.1:9401
-  #  sender:
-  #    type: web
-  #sleuth:
-  #  sampler:
-  #    probability: 1 
-      
+    name: microserver-movie
   datasource:
     url: jdbc:mysql://39.107.69.255:3306/dbmApi_db?characterEncoding=UTF8
     driver-class-name: com.mysql.jdbc.Driver
@@ -31,8 +23,8 @@ spring:
     jpa:
       database: mysql
       show-sql: true
-      generate-ddl: true #是否生成表结构    
-
+      generate-ddl: true #是否生成表结构
+      
 eureka:
   instance:
     prefer-ip-address: true #优先使用ip地址注册到eureka
@@ -40,11 +32,6 @@ eureka:
     register-with-eureka: true #消费方不是必须注册到eureka
     fetch-registry: true
     service-url:
-     #defaultZone : http://localhost:8761/eureka/,http://localhost:8762/eureka/
-     defaultZone : http://106.55.1.61:8761/eureka
+      #defaultZone : http://localhost:8761/eureka/,http://localhost:8762/eureka/
+      defaultZone : http://106.55.1.61:8761/eureka
     registry-fetch-interval-seconds: 5 #刷新注册信息的间隔时间
-
-
-#feign:
-#  hystrix:
-#    enabled: true
