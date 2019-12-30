@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   application:
-    name: microserver-movie
+    name: microserver-kucun
   datasource:
     url: jdbc:mysql://39.107.69.255:3306/dbmApi_db?characterEncoding=UTF8
     driver-class-name: com.mysql.jdbc.Driver
