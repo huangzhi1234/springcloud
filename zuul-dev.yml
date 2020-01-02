@@ -40,6 +40,10 @@ zull:
     microserver-movie:
       path: /microserver-movie/* #需要转发的路径
       serviceId: microserver-movie #最终需要转发微服务的名称
+    microserver-pay:
+      path: /microserver-pay/* #需要转发的路径
+      serviceId: microserver-pay #最终需要转发微服务的名称
+
   SendErrorFilter:
     error:
       disable: true
